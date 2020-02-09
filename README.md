@@ -1,7 +1,5 @@
 # physics-churn
 
-My first (real) data project! 
-
 In the world of physics, a major question is whether or not a promising young researcher will leave the field. 
 Of course, as I currently wrap up my PhD and look to transition into data science, this question is particularly close to my own experience. 
 It is also extremely important for senior faculty members looking to hire postdocs or junior faculty. 
