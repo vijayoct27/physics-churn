@@ -25,6 +25,7 @@ We also label the remaining authors as either "Active", "Churn", or unlabeled us
 Finally in inspire_model, we build a predictive model and analyze its results/shortcomings.
 We find that a simple random forest classifier is able to achieve 90% accuracy on the training data with cross-validation, and that the most important features for prediction are related to citations of an authors' collaborators and the author's maximum citations per year over all their papers. 
 This agrees with the intuition that breakthroughs (i.e. papers with lots of citations) are important, and also that having good/famous collaborators can go a long way. 
-While it appears the model does not generalize well to authors with a minimum publication record, i.e. graduate students. This may due to the sparcity of such data points in the training data. 
-However, it does seem to give accurate predictions ("Active" vs. "Churn") to unlabeled authors that are currently finishing their first postdoc.
+It appears the model does not generalize well to authors with a minimum publication record, i.e. graduate students. 
+This may due to the sparcity of such examples in the training data. 
+However, it does seem to give accurate predictions ("Active" vs. "Churn") to authors that are currently finishing their first postdoc, based on a few test cases.
 
