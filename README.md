@@ -22,7 +22,7 @@ We then label the remaining author examples as either "Active", "Churn", or "Unl
 
 Finally in [inspire_model](https://nbviewer.jupyter.org/github/vijayoct27/physics-churn/blob/master/inspire_model.ipynb) we build a benchmark model and analyze its results. 
 A simple random forest classifier achieves ~ 90% accuracy on validation data. 
-We find the most important features are generally an author's max citations per year averaged over all papers and the max value of this same metric over all the author's collaborators.  
+The most important features are generally an author's max citations per year averaged over all papers and the max value of this same metric over all the author's collaborators.  
 This agrees with the intuition that having breakthroughs (i.e. papers with lots of citations) and working with people who have had breakthroughs tend to be correlated with academic success. 
 We also use the SHAP framework to interpret how the model makes any individual prediction and to explain the feature importances for "Unlabeled" test cases. 
 
