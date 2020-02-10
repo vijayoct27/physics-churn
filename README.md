@@ -20,14 +20,14 @@ Next in [inspire_eda](https://nbviewer.jupyter.org/github/vijayoct27/physics-chu
 We use various selection criteria to cut irrelevent data that would skew our results, e.g. authors in large experimental collaborations which can have O(100-1000) collaborators and a biased citation count. 
 We then label the remaining author examples as either "Active", "Churn", or "Unlabeled" using a straightforward criteria. 
 
-Finally in [inspire_model](https://nbviewer.jupyter.org/github/vijayoct27/physics-churn/blob/master/inspire_model.ipynb) we build a benchmark model and analyze its results. 
+Finally in [inspire_model](https://nbviewer.jupyter.org/github/vijayoct27/physics-churn/blob/master/inspire_model.ipynb) we fit a benchmark model and analyze its results. 
 A simple random forest classifier achieves ~ 90% accuracy on validation data. 
 Generally, the most important features are an author's max citations per year averaged over all papers and the max value of this same metric over all the author's collaborators.  
 This agrees with the intuition that having breakthroughs (i.e. papers with lots of citations) and working with people who have had breakthroughs tend to be correlated with academic success. 
 We also use the SHAP framework to interpret how the model makes individual predictions and to explain the feature importances on "Unlabeled" test cases. 
 We found the benchmark model givse sensible and informative results for researchers currently on their first or second postdoc seeking full-time academic jobs. 
 
-A major shortcoming with the model is that it tends to give excessiely high churn probabilities for graduate students. 
+However, one major shortcoming with the model is that it tends to give excessiely high churn probabilities for graduate students. 
 This is expected because a typical grad student's publications data (even if normalized by number of years in the field), usually cannot compare with those of "Active" authors who have been doing physics for >= 12 years.
 One way to improve the model would be to somehow account for "potential".
 This can be done by generating data points for each labeled author for every year they have been in the field. 
