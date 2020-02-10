@@ -16,21 +16,22 @@ I decided to use only appropriately "normalized" features such as "papers per ye
 This is because traditional metrics such as total citations or number of publications may lead to label leakage in any predictive model due to their containing implicit information about a given author's number of years in the field. 
 By definition, such information is biased against a young researcher. 
 
-Next in [inspire_eda](https://nbviewer.jupyter.org/github/vijayoct27/physics-churn/blob/master/inspire_eda.ipynb) we explore the data
-We use various selection criteria to cut irrelevent data that might skew our results, e.g. authors in large experimental collaborations which can have O(100-1000) collaborators and a biased citation count. 
+Next in [inspire_eda](https://nbviewer.jupyter.org/github/vijayoct27/physics-churn/blob/master/inspire_eda.ipynb) we explore the data. 
+We use various selection criteria to cut irrelevent data that would skew our results, e.g. authors in large experimental collaborations which can have O(100-1000) collaborators and a biased citation count. 
 We then label the remaining author examples as either "Active", "Churn", or "Unlabeled" using a straightforward criteria. 
 
 Finally in [inspire_model](https://nbviewer.jupyter.org/github/vijayoct27/physics-churn/blob/master/inspire_model.ipynb) we build a benchmark model and analyze its results. 
-A simple random forest classifier achieves ~ 90% accurate on validation data, and we find the most important features are an author's max citations per year averaged over all papers and the max value of this same metric over all the author's collaborators.  
-This agrees with the intuition that having breakthroughs (i.e. papers with lots of citations) and working with authors who have had previously breakthroughs tend to be correlated with academic success. 
-We also use the model to provide a individual feature importances for sample "Unlabeled" authors using the SHAP framework, i.e. explain the model "black-box" for any single prediction. 
+A simple random forest classifier achieves ~ 90% accurate on validation data. 
+We find the most important features are generally an author's max citations per year averaged over all papers and the max value of this same metric over all the author's collaborators.  
+This agrees with the intuition that having breakthroughs (i.e. papers with lots of citations) and working with people who have had breakthroughs tend to be correlated with academic success. 
+We also use the SHAP framework to interpret how the model makes any individual prediction and to explain the feature importances for "Unlabeled" test cases. 
 
-A major shortcoming with the model is it tends to give excessiely high churn probabilities for grad students. 
+A major shortcoming with the model is that it tends to give excessiely high churn probabilities for graduate students. 
 This is expected because a typical grad student's publications data (even if normalized by number of years in the field), usually cannot compare with those of "Active" authors who have been doing physics for >= 12 years.
 One way to improve the model would be to somehow account for "potential".
 This can be done by generating data points for each labeled author for every year they have been in the field. 
 For instance, we can generate 20 additional author examples for a physicist of 20 years experience, with each example only accounting for the citation metrics up to that time period but still importantly labeled as active. 
-However, based on a few test cases, it appears the benchmark does give sensible and insightful results for researchers currently on their first or second postdoc and seeking full-time academic jobs. 
+However, it appears the benchmark model does give sensible and insightful results for researchers currently on their first or second postdoc and seeking full-time academic jobs. 
 It also appears to be quite informative for junior faculty who have yet to receive tenure in terms of outlining the important features that improve or reduce their chances of longevity. 
 
 
