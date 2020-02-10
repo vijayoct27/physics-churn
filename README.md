@@ -30,9 +30,9 @@ A major shortcoming with the model is that it tends to give excessiely high chur
 This is expected because a typical grad student's publications data (even if normalized by number of years in the field), usually cannot compare with those of "Active" authors who have been doing physics for >= 12 years.
 One way to improve the model would be to somehow account for "potential".
 This can be done by generating data points for each labeled author for every year they have been in the field. 
-For instance, we can generate 20 additional author examples for a physicist of 20 years experience, with each example only accounting for the citation metrics up to that time period but still importantly labeled as active. 
+For instance, we can generate 20 additional author examples (labeled as "Active") for a physicist of 20 years experience, with each example only accounting for the citation metrics up to a given year.
 However, it appears the benchmark model does give sensible and insightful results for researchers currently on their first or second postdoc and seeking full-time academic jobs. 
-It also appears to be quite informative for junior faculty who have yet to receive tenure in terms of outlining the important features that improve or reduce their chances of longevity. 
+It also appears to be quite informative for junior faculty who have not yet received tenure. 
 
 
 
