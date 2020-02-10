@@ -17,7 +17,7 @@ This is because traditional metrics such as total citations or number of publica
 By definition, such information is biased against a young researcher. 
 
 Next in [inspire_eda](https://nbviewer.jupyter.org/github/vijayoct27/physics-churn/blob/master/inspire_eda.ipynb) we explore the data. 
-We use various selection criteria to cut irrelevent data that would skew our results, e.g. authors in large experimental collaborations which can have O(100-1000) collaborators and a biased citation count. 
+We use various selection criteria to cut irrelevent data that would skew our results, e.g. authors in large experimental collaborations which can have O(1000) collaborators and a biased citation count. 
 We then label the remaining author examples as either "Active", "Churn", or "Unlabeled" using a straightforward criteria. 
 
 Finally in [inspire_model](https://nbviewer.jupyter.org/github/vijayoct27/physics-churn/blob/master/inspire_model.ipynb) we fit a benchmark model and analyze its results. 
