@@ -1,4 +1,4 @@
-# Model to predict physics "churn" + extract insights into key features correlating with researchers leaving academia
+# Model to predict academic "churn", extract insights into key features correlating with researchers leaving physics
 
 In the world of physics, a major question is being able to anticipate whether or not a young researcher will leave the field and why. 
 As I currently wrap up my PhD and look to transition into data science, this question is particularly close to my own experience as well as that of my peers currently on the academic job market.
