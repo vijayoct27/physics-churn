@@ -27,9 +27,9 @@ This agrees with the intuition that having breakthroughs (i.e. papers with lots 
 We also use the SHAP framework to interpret how the model makes individual predictions and to explain the feature importances on "Unlabeled" test cases. 
 We found the benchmark model givse sensible and informative results for researchers currently on their first or second postdoc seeking full-time academic jobs. 
 
-However, one major shortcoming with the model is that it tends to give excessiely high churn probabilities for graduate students. 
-This is expected because a typical grad student's publications data (even if normalized by number of years in the field), usually cannot compare with those of "Active" authors who have been doing physics for >= 12 years.
-One way to improve the model would be to somehow account for "potential".
-This can be done by generating data points for each labeled author for every year they have been in the field. 
-For instance, we can generate 20 additional author examples (labeled as "Active") for a physicist of 20 years experience, with each example only accounting for the citation metrics up to a given year.
+One major shortcoming is that our benchmark model tends to predict excessiely high churn probabilities for graduate students. 
+This is to be expected since a typical grad student's metrics (even if normalized by number of years in the field), usually cannot compare with those of "Active" authors who have been doing physics for more than 12 years.
+Of course, one way to improve the model would be to somehow account for "potential".
+This could be done by generating data points for each labeled author for every year they have been in the field. 
+For instance, we might generate 20 additional author examples (labeled as "Active") for a physicist of 20 years experience, with each example only accounting for the citation metrics up to a given year.
 
