@@ -6,7 +6,7 @@ It is also crucial for senior faculty looking to hire postdocs or junior faculty
 Academic hiring committees want to select candidates with a strong chance for success: given the sparcity of academic jobs, due diligence is exercised for every hire. 
 However, while there are a plethora of metrics which distinguish researchers (e.g. citations, h-index, e-index, etc.) there is also a high degree of subjectivity in the selection process. 
 
-I decided to tackle this problem in a data-driven way using the large database of high-energy physics publiations and metadata available on [INSPIRE] (https://www.inspirehep.net).  
+I decided to tackle this problem in a data-driven way using the large database of high-energy physics publiations and metadata available on [INSPIRE](https://www.inspirehep.net).  
 This is basically a problem of predicting "churn" based on existing data on authors who have either stayed in or left physics. 
 More importantly, can we gain insights into the key features that correlate with academic longevity? 
 
