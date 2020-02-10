@@ -25,7 +25,7 @@ A simple random forest classifier achieves ~ 90% accuracy on validation data.
 Generally, the most important features are an author's max citations per year averaged over all papers and the max value of this same metric over all the author's collaborators.  
 This agrees with the intuition that having breakthroughs (i.e. papers with lots of citations) and working with people who have had breakthroughs tend to be correlated with academic success. 
 We also use the SHAP framework to interpret how the model makes individual predictions and to explain the feature importances on "Unlabeled" test cases. 
-We found the benchmark model givse sensible and informative results for researchers currently on their first or second postdoc seeking full-time academic jobs. 
+We found the benchmark model givse sensible and insightful predictions for researchers currently on their first or second postdoc seeking full-time academic jobs. 
 
 One major shortcoming is that our benchmark model tends to predict excessiely high churn probabilities for graduate students. 
 This is to be expected since a typical grad student's metrics (even if normalized by number of years in the field), usually cannot compare with those of "Active" authors who have been doing physics for more than 12 years.
