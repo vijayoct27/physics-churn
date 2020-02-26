@@ -12,8 +12,8 @@ More importantly, can we gain insights into the key features that correlate with
 
 In [inspire_data_cleaning](https://nbviewer.jupyter.org/github/vijayoct27/physics-churn/blob/master/inspire_data_cleaning.ipynb), we first clean the data (e.g. dealing with multiple names for the same author). 
 We also create a network of collaborators for each author in order to engineer relevant features regarding citations of collaborators. 
-I decided to use only appropriately "normalized" features such as "papers per year" and "citations per year averaged over all papers". 
-This is because traditional metrics such as total citations or number of publications may lead to label leakage in any predictive model due to their containing implicit information about a given author's number of years in the field. 
+For the model I use only appropriately "normalized" features such as "papers per year" (`Productivity`) and "citations per year averaged over all papers" (`cpy_mean`)
+This is because metrics such as number of publications or total citations would result in label leakage due to their containing implicit information about a given author's number of years in the field. 
 By definition, such information is biased against a young researcher. 
 
 Next in [inspire_eda](https://nbviewer.jupyter.org/github/vijayoct27/physics-churn/blob/master/inspire_eda.ipynb) we explore the data. 
