@@ -4,7 +4,7 @@ In the world of physics, a major question is being able to anticipate whether or
 As I currently wrap up my PhD and look to transition into data science, this question is particularly close to my own experience as well as that of my peers currently on the academic job market.
 It is also crucial for senior faculty looking to hire postdocs or junior faculty. 
 Given the sparcity of academic jobs, hiring committees exercise due diligence in selecting candidates with a strong chance for success. 
-However, while there are a plethora of metrics which distinguish researchers (e.g. citations, h-index, e-index, etc.) there is also a high degree of subjectivity in the entire process. 
+However, while there are a plethora of metrics which distinguish researchers (e.g. citations, h-index, e-index, etc.) there is also a high degree of subjectivity in the process. 
 
 I decided to tackle this problem in a data-driven way using the large database of high-energy physics publiations and metadata available on [INSPIRE](https://www.inspirehep.net).  
 This is basically a problem of predicting "churn" based on the data from existing authors who have either stayed in or left physics. 
