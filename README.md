@@ -10,8 +10,8 @@ I decided to tackle this problem in a data-driven way using the large database o
 This is basically a problem of predicting "churn" based on the data from existing authors who have either stayed in or left physics. 
 More importantly, can we gain insights into the key features that correlate with academic longevity? 
 
-In [inspire_data_cleaning](https://nbviewer.jupyter.org/github/vijayoct27/physics-churn/blob/master/inspire_data_cleaning.ipynb), we first clean the data (e.g. dealing with different authors with the same name or multiple names for the same author). 
-We then engineer relevant features such as creating the network of collaborators for each author. 
+In [inspire_data_cleaning](https://nbviewer.jupyter.org/github/vijayoct27/physics-churn/blob/master/inspire_data_cleaning.ipynb), we first clean the data (e.g. dealing with multiple names for the same author). 
+We also create a network of collaborators for each author in order to engineer relevant features regarding citations of collaborators. 
 I decided to use only appropriately "normalized" features such as "papers per year" and "citations per year averaged over all papers". 
 This is because traditional metrics such as total citations or number of publications may lead to label leakage in any predictive model due to their containing implicit information about a given author's number of years in the field. 
 By definition, such information is biased against a young researcher. 
